@@ -1,0 +1,7 @@
+<h1>this is heading of page</h1>
+    <p>that is paragrah of bady</p>
+    <p>new one of paragraph</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi incidunt at error hic delectus esse labore id nisi, <strong>this bold bu using strong</strong> corrupti eveniet autem sint impedit eius culpa maxime,<em> <strong>this em tags</strong> </em> illo iure! Esse dolores facere cumque eos harum illo reprehenderit sequi perferendis odio aliquam.</p>
+    <p>first 
+       <hr> <br>  second
+    </p>

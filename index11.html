@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing day 11</title>
+</head>
+<style>
+    p {
+        font-size: 25px;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+        border: 2px solid black;
+    }
+
+    #box1 {
+        background-color: red;
+        position: relative;
+        top: 49px;
+        z-index: 40;
+    }
+
+    #box2 {
+        background-color: green;
+        position: relative;
+        /* top: 14px;  */
+        z-index: 34;
+        /* visibility: hidden; */
+        /* display: none; */
+    }
+
+    #box3 {
+        background-color: aqua;
+    }
+
+    #box4 {
+        background-color: yellow;
+    }
+
+    .container {
+        height: 730px;
+        width: 100%;
+        border: 2px solid black;
+        display: flex;
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column-reverse; */
+        /* flex-wrap: wrap-reverse; */
+        /* flex-flow: row-reverse wrap; */
+        /* justify-content: center;
+        justify-content: space-around; */
+        /* align-items: center;
+        align-items: flex-end; */
+        /* align-items: flex-start; */
+    }
+
+    .item {
+        background-color: tomato;
+        border: 3px solid green;
+        margin: 10px;
+        padding: 3px;
+        width: 200px;
+        height: 200px;
+    }
+
+    #item1 {
+        /* order: 3; */
+        flex-grow: 2;
+        flex-shrink: 3;
+    }
+
+    #item2 {
+        /* order: 5; */
+        flex-grow: 4;
+    }
+
+    #item3 {
+        order: 4;
+    }
+</style>
+
+<body>
+    <h1>video 26 lil project done</h1>
+    <p>Project heavy geya muje buhat idea ho geya h Mashallah</p>
+    <h1>Video 27 start here let's go</h1>
+    <h3>visiblte and z index</h3>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <h1>Video 28 start Flex Box start here</h1>
+    <div class="container">
+        <div class="item" id="item1">First Box</div>
+        <div class="item" id="item2">Second Box</div>
+        <div class="item" id="item3">Third Box</div>
+        <!-- <div class="item" id="item4">Fourth Box</div>
+        <div class="item" id="item5">Fift Box</div>
+        <div class="item" id="item6">Sixth Box</div> -->
+    </div>
+
+</body>
+
+</html>

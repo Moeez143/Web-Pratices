@@ -1,0 +1,557 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index 26</title>
+</head>
+<style>
+    .bulb {
+        height: 40px;
+        width: 100px;
+        text-align: center;
+        justify-content: center;
+        padding: 5px 5px 5px 5px;
+        margin: 30px;
+        border-radius: 15px ;
+    }
+    #btn1{
+        cursor: pointer;
+        color: white;
+        background-color: black;
+        border-radius: 20px;
+        padding: 8px;
+    }
+    .fb:hover {
+        background-color: rgb(0, 102, 255);
+        color: white;
+        transition: 0.7s ease-in-out;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <button id="btn">Click me</button>
+    </div>
+    <br>
+    <div id="ran">
+    </div>
+    <button id="btn1" onclick="stop()">Stop Number Generatering</button>
+
+    <button id="btn1" onclick="start()">Start Number Generatering</button>
+    <br><br>
+    <button id="fb" class="bulb fb">facebook</button>
+    <div id="time"></div>
+
+</body>
+<script>
+    // CWH new playlist video 48 start here 
+
+    btn.addEventListener('click', function () {
+        alert("Hello World..!")
+        console.log("Event Runing");
+    })
+
+    btn.addEventListener('click', function () {
+        alert("Hello World Again..!");
+        console.log("2nd Event Runing");
+    })
+
+    function ganerator() {
+        document.getElementById('ran').innerHTML = Math.floor(Math.random()*1000);
+    }
+    document.addEventListener('mousemove', ganerator);
+
+    function stop() {
+        document.removeEventListener('mousemove', ganerator);
+    }
+
+    function start() {
+        document.addEventListener('mousemove', ganerator);
+    }
+
+    // CWH new playlist video 49 start here 
+    document.getElementById('fb').addEventListener('click', function () {
+        window.location = "http://facebook.com";
+    })
+
+    // setInterval(() => {
+    //     let d = new Date();
+    //     time.innerHTML = d; 
+    // }, 1000);
+
+    // CWH new playlist video 54  start here 
+    let promise = new Promise(function (resolve, reject) {
+        console.log("this is promise ");
+        resolve(56);
+    })
+
+    // console.log("hello one");
+    // setInterval(()=>{
+    //     console.log("Hello two");
+    // },3000)
+
+    console.log("hello three");
+    console.log(promise);
+
+    // CWH new playlist video 55 start here 
+    /*   let p1 = new Promise((resolve,reject)=>{
+           console.log("Promise 1 is panding");
+           setTimeout(()=>{
+               resolve(true);
+           },3000)
+       })
+   
+       let p2 = new Promise((resolve,reject)=>{
+           console.log("Promise 2 is panding");
+           setTimeout(()=>{
+               reject(new Error("Here is Error"));
+           },3000)
+       })
+   
+       p1.then((value)=>{
+           console.log("Promise 1 value = ",value);
+       },(Error)=>{
+           console.log("Promise 1 ",Error);
+       })
+       
+       p2.then((value)=>{
+           console.log("Promise 2 Value = ",value);
+       },(Error)=>{
+           console.log("Promise 2 ",Error);
+       })
+   */
+    // CWH new playlist video 57 start here 
+    // let pro = new Promise((resolve,reject)=>{
+    //     console.log("Promise is not resolve");
+    //     setTimeout(() => {
+    //         resolve(1);
+    //     }, 2000);
+    // })
+
+    // pro.then(()=>{
+    //     console.log("Second Handler");
+    //     return new Promise((resolve,reject)=>{
+    //         setTimeout(() => {
+    //             resolve(4);
+    //         }, 5000);
+    //     })
+    // }).then((value)=>{console.log(value)});
+
+    // pro.then(()=>{
+    //     console.log("Congrats Promise Resolve");
+    // })
+
+    // CWH new playlist video 58 start here 
+    // let p1 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //        resolve("Value: 1") 
+    //     }, 3000);
+    // })
+    // let p2 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //     //    resolve("Value: 2")
+    //     reject(new Error("Error in P2")) 
+    //     },2000);
+    // })
+    // let p3 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //        resolve("Value: 3") 
+    //     }, 3000);
+    // })
+    // // let promise_all = Promise.all([p1,p2,p3]);
+    // // let promise_all = Promise.allSettled([p1,p2,p3]);
+    // // let promise_all = Promise.race([p1,p2,p3]);
+    // let promise_all = Promise.any([p1,p2,p3]);
+    // promise_all.then((value)=>{
+    //     console.log(value);
+    // })
+    // CWH new playlist video 61 start here 
+    //****Custom Error****
+    try {
+        console.log("moeez");
+        throw new ReferenceError("moeez error");
+    } catch (error) {
+        console.log(error.name);
+        console.log(error.message);
+        console.log(error.stack)
+    }
+    /*
+        try {
+            let age = prompt("Enter age?")
+            age = Number.parseInt(age);
+            if(age > 100){
+                throw new ReferenceError("not Possible");
+            }
+        } catch (error) {
+            console.log(error.name);
+            console.log(error.message);
+            console.log(error.stack)
+        }
+    */
+    // CWH new playlist video 62 start here 
+    try {
+        let a = 0;
+        console.log(program);
+        console.log("Try block running");
+    } catch (error) {
+        console.log("Error is Found");
+        // console.log(p);
+    }
+    finally {
+        console.log("Finally block running");
+        // console.log(q);
+    }
+
+    // CWH new playlist video 63 start here 
+    const loadScript = async (src) => {
+        return new Promise((resolve, reject) => {
+            let script = document.createElement("script");
+            script.src = src;
+            script.onload = () => {
+                resolve(src + " => (Script Added)");
+            }
+            document.head.append(script);
+        })
+    }
+    let b = loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js")
+    b.then((value) => {
+        console.log("Using Then Function")
+        console.log(value);
+    })
+
+    const main2 = async () => {
+        console.log("Using Async")
+        console.log(new Date().getMilliseconds())
+        let a = await loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js")
+        console.log(a);
+        console.log(new Date().getMilliseconds())
+    }
+    // main2();
+
+    // CWH new playlist video 66 start here 
+
+    // let p = fetch("https://goweather.herokuapp.com/weather/Ny");
+    // p.then((response) => {
+    //     console.log(response.status)
+    //     console.log(response.ok)
+    //     return response.json();
+    // }).then((response) => {
+    //     console.log(response);
+    // })
+
+
+    // CWH new playlist video 67 start here 
+
+    let option = {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            title: 'Obito',
+            body: 'Plays',
+            userId: 1,
+        })
+    }
+    fetch('https://jsonplaceholder.typicode.com/posts', option)
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+
+    // CWH new playlist video 70 start here 
+    // let url = "https://kontests.net/api/v1/all"
+    // let response = fetch(url);
+    // response.then((v)=>{
+    //     v.json();
+    // }).then((contests)=>{
+    //     console.log(contests);
+    //     for (const item of contests) {
+    //         console.log(constests[item])
+    //     }
+    // })
+
+    // CWH new playlist video 75 start here 
+    let a = {
+        // name : "DEMO_a_Object",
+        language : "JavaScript",
+        run : ()=>{
+            // alert("Alert function inside a Object is running")
+        }
+    }
+    
+    console.log(a);
+
+    let demo = {
+        run : ()=>{
+            // alert("Alert function is running")
+        }
+    }
+    demo.__proto__ = {
+        name : "DEMO_in_last_proto_Object"
+    }
+
+    a.__proto__ = demo
+    a.run();
+    // demo.run();
+    console.log(a.name)
+
+    // CWH new playlist video 76 start here 
+     class railwayForm{
+        constructor(name,id){
+            console.log("calling")
+            this.name = name;
+            this.id = id;
+        }
+        perview(){
+            console.log(this.name + " and "+this.id + " of Form")
+        }
+        submit(){
+            console.log(this.name+" and "+this.id + " of Form Submit")
+        }
+        cancel(){
+            console.log(this.name+" and "+this.id + " of Form Reject")
+        }
+        // filling(name){
+        //     this.name = name;
+        // }
+    }
+    let person1Form = new railwayForm("person1",2121);
+    // person1Form.filling("Person1");
+    let person2Form = new railwayForm("Person2" , 2033);
+    // person2Form.filling("Person2");
+    // person1Form.submit();
+    // person2Form.submit();
+    // person2Form.cancel();
+    person1Form.perview();
+    person1Form.submit();
+    // person1Form.cancel();
+
+    person2Form.perview();
+    person2Form.cancel();
+
+    // CWH new playlist video 78 start here 
+  /*  class Animal{
+        constructor(name,color){
+            this.name = name;
+            this.color = color;
+        }
+        run(){
+            console.log(this.name + " is Running!");
+        }
+        shout(){
+            console.log(this.name + " is Shouting!");
+        }
+    }
+    class monkey extends Animal{
+        eat(){
+            console.log(this.name + " is Eating his Food!");
+        }
+    }
+    let obj1 = new Animal("barvo","orgen");
+    let obj2 = new monkey("Yoyo","black");
+    obj1.run();
+    obj2.run();
+    obj2.eat();
+ */   
+    // CWH new playlist video 79 , 80 start here 
+    class employee{
+        constructor(name){
+            console.log(`${name} - Empolyee Contructor running`);
+        }
+        login(){
+            console.log(`Employee has login `);
+        }
+        logout(){
+            console.log(`Employee has logout `);
+        }
+        requestLeaves(x){
+            console.log(`Employee has cjahn Request ${x} leaves `);
+        }
+    }
+    class programer extends employee{
+        constructor(name){
+            super(name)
+            console.log(`${name} - Programmer Contructor running`);
+        }
+        requestCoffee(x){
+            console.log(`Employee has ${x} Coffee`);
+        }
+        requestLeaves(x){
+            super.requestLeaves(x)
+            // console.log(`Programmer got ${x+1} leaves (One Extra)`);
+        }
+    }
+    let e = new programer("Obito");
+    e.login();
+    e.logout();
+    e.requestCoffee(4);
+    e.requestLeaves(5)
+
+    // CWH new playlist video 81 start here 
+ /*   class Animal{
+        constructor(name){
+            this.name = Animal.capitalized(name); 
+            console.log(`${this.name} - constructor is running`);
+        }
+        walk(name){
+            console.log(`${this.name} - is Walking`);
+        }
+        static capitalized(name){
+            return name.charAt(0).toUpperCase() + name.substr(1,name.length);
+        }
+    }
+    let jack  =new Animal("jack");
+    jack.walk();
+*/
+    // CWH new playlist video 82 start here 
+    class Animal{
+        constructor(name){
+            this.reak  = name;
+        }
+        fly(){
+            console.log("Flying function is running");
+        }
+        get name(){
+            return this.reak;
+        }
+        set name(realName){
+            this.reak = realName;
+        }
+    }    
+    let a1 = new Animal("Minato");
+    a1.fly();
+    console.log(a1.name);
+    a1.name  = "Obito";
+    console.log(a1.name);
+    demo = 23;
+    console.log(a1 instanceof Animal);
+    console.log(demo instanceof Animal);    
+
+    // CWH new playlist video 83 start here 
+    class complex{
+        constructor(real , imaginary){
+            this.real = real;
+            this.imaginary = imaginary
+        }
+        add(num){
+            this.real = this.real + num.real
+            this.imaginary = this.imaginary + num.imaginary
+        }
+    }
+    let d = new complex(4,5)
+    let c = new complex(2,3)
+    d.add(c); //d call function and values changes in d
+    c.add(d); //c call function and values changes in c
+    console.log(`${d.real} and i${d.imaginary} of A values`);
+    console.log(`${c.real} and i${c.imaginary} of C values`);
+
+    // CWH new playlist video 86 start here 
+ /*   let a2 = ()=>{
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(456);
+            },3000);
+        })
+    }
+    (async ()=>{
+        let b = await a2()
+        console.log(b)
+        let c = await a2()
+        console.log(c)
+        let d = await a2()
+        console.log(d)
+    })()
+*/
+    // CWH new playlist video 87 start here 
+    let obj1={
+        name : "Obito",
+        company : "XYZ Company",
+        address : "XYZ"
+    }
+    console.log({...obj1 , name:"minato"})
+
+    // CWH new playlist video 89 start here 
+    function greet() {
+        console.log("Good Morning")
+    }
+    greet();
+
+    // CWH new playlist video 90 start here 
+    const x = ()=>{
+        let a = 1;
+        console.log(a)
+        const y = ()=>{
+            let a = 2;
+            console.log(a)
+            const z = ()=>{
+                let a = 3;
+                console.log(a)
+            }
+        }
+        y();
+    }
+    x();
+
+    // CWH new playlist video 91 start here 
+    const sayhello = ()=> console.log("hello fucntion running");
+    sayhello();
+
+    const obj3 ={
+        name : "Obito",
+        role : "Web Developer",
+        experiences : "5 years",
+        show : function() {
+            console.log(`The name of ${this.name}`);
+            console.log(`The role of ${this.role}`);
+        }
+    }
+    obj3.show();
+
+    // CWH new playlist video 92 start here 
+   /* const a3 = async (text)=>{
+        return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(text)
+        },2000);
+    })
+}
+    (
+        async()=>{
+            let text = await a3("Hello")
+            console.log(text)
+            text = await a3("World")
+            console.log(text)
+        }
+    )()
+    */
+   const a3 = async(text)=>{
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(text);
+        }, 1500);
+    })
+   }
+   (
+    async()=>{
+        let text = await a3("Mr");
+        console.log(text)
+        text = await a3("Obito");
+        console.log(text);
+        text = await a3("Plays")
+        console.log(text);
+    }
+   )()
+
+   
+    // CWH new playlist video 99 start here 
+
+    const regExp = /very/g
+    const text = "very very vs code very very";
+    // console.log(text.replace("very","good")) //this change only first word found
+    console.log(text.replace(regExp,"good")) // this change whole world found in string
+
+
+
+</script>
+</html>

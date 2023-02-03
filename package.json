@@ -1,0 +1,16 @@
+{
+  "name": "web-pratices",
+  "version": "1.0.0",
+  "main": "LinkList_In_JS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pdf-node": "^1.0.1"
+  },
+  "description": ""
+}

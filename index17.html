@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing day 17</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        /* grid-template-columns: 200px 120px 120px; */
+        /* grid-template-columns: 200px auto 120px; */
+        /* grid-template-columns: 2fr 5fr 3fr; */
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 1rem 5rem;
+    }
+    .item{
+        /* height: 100px; */
+        /* width: 120px; */
+        background-color: aqua;
+        border: 2px solid black;
+        padding: 10px 20px;
+    }
+    .grid{
+        display: grid;
+        grid-template-rows: 1fr 1fr 4fr;
+        grid-gap: 5px;
+        grid-template-columns: 2fr 4fr;
+        grid-auto-rows: 3fr;
+    }
+    .box{
+        background-color: red;
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <h1>Video 39 project no 2 goes HEAVY</h1>
+    <h1>Now Video 40 let get started</h1>
+    <h2>Grid CSS</h2>
+    <div class="container">
+        <div class="item">this is item box-1</div>
+        <div class="item">this is item box-2</div>
+        <div class="item">this is item box-3</div>
+        <div class="item">this is item box-4</div>
+        <div class="item">this is item box-5</div>
+        <div class="item">this is item box-6</div>
+        <div class="item">this is item box-7</div>
+    </div>
+    <h1>video 41 start here</h1>
+    <div class="grid">
+        <div class="box">this is box1</div>
+        <div class="box">this is box2</div>
+        <div class="box">this is box3</div>
+        <div class="box">this is box4</div>
+        <div class="box">this is box5</div>
+        <div class="box">this is box6</div>
+        <div class="box">this is box7</div>
+        <div class="box">this is box8</div>
+        <div class="box">this is box9</div>
+    <h1>video 41 end here</h1>
+    </div>
+</body>
+</html>

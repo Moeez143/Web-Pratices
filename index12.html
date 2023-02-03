@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing day 12</title>
+</head>
+<style>
+    html{
+        font-size: 25px;
+    }
+    .container{
+        /* font-size: 12px; */
+        /* width: 400px; */
+        /* height: 300px; */
+        /* height: 25vh; */
+        /* width: 30vw; */
+        border: 2px solid red;
+    }
+    h2{
+        text-align: center;
+    }
+    #first{
+        font-size: 3em;
+        /* padding: 3em; */
+    }
+    #second{
+        font-size: 3rem;
+        /* padding: 3rem;x */
+    }
+    .box{
+        background-color: red;
+        color: black;
+        font-size: 72px;
+        text-align: center;
+        display: none;
+    }
+    @media(max-width:300px){
+       #box1{
+        display: block;
+       } 
+    }
+    @media(max-width:500px) and (min-width:300px){
+       #box2{
+        display: block;
+        background-color: green;
+       } 
+    }
+    @media(min-width:700px){
+       #box3{
+        display: block;
+        background-color: aqua;
+       } 
+    }
+</style>
+<body>
+    <h1>video 29 start here</h1>
+    <div class="container">
+        <h2 id="first">This is Heading First</h1>
+        <h2 id="second">This is Heading Second</h1>
+        <h2 id="third">This is Heading Third</h1>
+    </div>
+    <h1>Video 30 start here</h1>
+    <div class="box" id="box1">box 1</div>
+    <div class="box" id="box2">box 2</div>
+    <div class="box" id="box3">box 3</div>
+    <div class="box" id="box4">box 4</div>
+    <h1>video 30 end here</h1>
+</body>
+</html>

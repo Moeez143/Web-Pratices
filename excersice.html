@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Man</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+    body{
+        font-family: 'Oswald', sans-serif;
+        background-color: black;
+        color: rgb(64, 205, 64);
+    }
+
+</style>
+<body>
+    <div id="text"></div>
+</body>
+<script>
+    let a = [
+        "Initializing Hack tool...",
+        "Connecting to Facebook...",
+        "Connecting to server 1...",
+        "Connection failed.",
+        "Retrying...",
+        "Connecting to server 2",
+        "Connected Successfully...",
+        "Username Found...",
+        "Trying Brute Force...",
+        "200K passwords tried...",
+        "Match not found",
+        "Another 200K passwords tried...",
+        "Match not found...",
+        "Another 200K passwords tried...",
+        "Match not found...",
+        "Another 200K passwords tried...",
+        "Match found...",
+        "Accessing Account...",
+        "Hack Successful...",
+        "Downloading Data...",
+]
+const sleep = async()=>{
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(true)
+        }, 2000);
+    })
+}
+const hackshow = async(message)=>{
+    await sleep();
+    // console.log(message);
+    text.innerHTML = text.innerHTML + message + "<br>";
+}
+(async () => {
+        for (let i = 0; i < a.length; i++) {
+                await hackshow(a[i]);
+        }
+})()
+</script>
+</html>

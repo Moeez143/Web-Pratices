@@ -1,0 +1,223 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // yahoo baba video 42
+    function checkArray(check) {
+        if (Array.isArray(check)) {
+            document.write("This is Array" + "<br>");
+        }
+        else {
+            document.write("This is not Array" + "<br>");
+        }
+    }
+    let a = ["demo1", "demo6", "demo2", "demo3", "demo4", "demo5", "demo6", "demo7"];
+    // let a = 10
+
+    document.write(a + "<br><br>");
+    checkArray(a);
+    // let b = Array.isArray(a);
+    // document.write(b + "<br><br>");
+    // let c =10;
+    // let d = Array.isArray(c);
+    // document.write(d);
+
+    // yahoo baba video 43 start here
+    let b = a.indexOf("demo6", 2);
+    document.write("The index value of serching item : " + b + "<br><br>");
+
+    // yahoo baba video 44 start here
+    let c = a.includes("demo6");
+    document.write("item found value : " + c + "<br><br>");
+
+    // yahoo baba video 45 start here
+    let exp = [106, 25, 93, 3, 18, 66];
+    document.write(exp + "<br><br>");
+    let d = exp.some((age) => {   //this is function check on all values and find any one match value its return ture
+        return age >= 18;
+    });
+    document.write(d + "<br><br>");
+
+    let e = exp.every((age) => {    //this function check every value aur greatter than 18 by every keyword
+        return age >= 18;
+    });
+    document.write(e + "<br><br>");
+
+    // yahoo baba video 47 start here
+    let f = [16, 25, 93, 3];
+    let exp1 = f.filter((ages) => {
+        return ages >= 18;
+    });  // filer function show only those values whos fulfill the condisuntion
+    document.write(exp1 + "<br><br>");
+
+    // yahoo baba video 48 start here
+    f.toString; //tostring function converted the array to string and its change the orginal array
+    console.log(f);
+    document.write(f + "<br><br>");
+
+    // yahoo baba video 49 start here
+    document.write(a + "<br><br>"); //this print the whole array at onces
+    a.forEach((ValueOfArray, index) => {
+        document.write(ValueOfArray + "=> " + " the index of this value is : " + index + "<br><br>"); //this print the each value of array one by one 
+    });
+
+    // yahoo baba video 50 start here and CHW playlist video 19 
+    let obj = {
+        Fname: 'demo_name',
+        Lname: 'last_demo_name',
+        age: 23,
+        email: 'demo_email',
+        living: {
+            country: "pakistan",
+            area: "Allama Iqbal town",
+        },
+        array: ["deamo1", "deamo1", "deamo1"],
+        salary: () => {
+            return 2500;
+        },
+        fullName: function () {
+            return this.Fname + " " + this.Lname;
+        }
+    };
+    document.write(obj + "<br>");
+    document.write(obj.fullName() + "<br>");
+    document.write(obj.salary() + "<br>");
+    document.write(obj.living.area + "<br>");
+
+
+    console.log(obj);
+    console.log(obj.fullName());
+
+    for (let i = 0; i < f.length; i++) {
+        console.log(f[i]);
+        document.write(f[i] + " " + "<br>");
+    }
+    f.forEach((ValueOfArray, index) => {
+        document.write(ValueOfArray * ValueOfArray + "<br><br>"); //this print the each value of array one by one 
+        console.log(ValueOfArray * ValueOfArray);
+    });
+    let str = 'demo-1';
+    let array = Array.from(str);
+    document.write(array + "<br><br>");
+    console.log(array);
+
+    let arr = [22, 33, 54, 66];
+    for (let i of arr) {
+        //this is easy uesd simple loop instead for loop
+        document.write(i + "<br><br>");
+        // console.log(i);
+    }
+    // CWH new playlist video 20 start here & yahoo baba video 52 start
+    let ArrayByMap = arr.map((value) => {   //map function create new arry 
+        console.log(value);
+        return value + 1;
+    });
+    document.write("Updated Array " + ArrayByMap + "<br>");
+    console.log("Updated Array", ArrayByMap);
+
+    let arr2 = [45, 23, 21, 0, 3, 5]
+    let a2 = arr2.filter((a) => {
+        return a < 10
+    })
+    console.log(a2)
+
+    let arr3 = [1, 2, 3, 5, 2, 1]
+    const reduce_func = (h1, h2) => {
+        return h1 + h2
+    }
+    let newarr3 = arr3.reduce(reduce_func)
+    console.log(newarr3);
+
+    let student = [
+        { Name: 'demo_Name_1', age: 13 },
+        { Name: 'demo_Name_2', age: 14 },
+        { Name: 'demo_Name_3', age: 15 },
+    ];
+    console.log(student);
+
+    for (let index = 0; index < student.length; index++) {
+        document.write(student[index].Name + " " + student[index].age + "<br>");
+    }
+
+    // CWH new playlist video 21 start here & yahoo baba video 52 start
+    // let arry = [5, 10, 15, 20];
+    // let UserValue = prompt("Enter the value?");
+    // UserValue = Number.parseInt(UserValue);
+    // arry.push(UserValue);
+    // document.write(arry + "<br>");
+    // console.log(arry);
+
+    // do {
+    //     UserValue = prompt("Enter the value?");
+    //     UserValue = Number.parseInt(UserValue);
+    //     arry.push(UserValue);
+    // } while (UserValue != 0);
+    // document.write(arry + "<br>" +"loop break boz you add zero");
+    // console.log(arry);
+    // console.log("loop break boz you add zero" + "<br>");
+
+    // let arry1 = [5, 10, 15, 20, 25 ,30];
+    // let NewValue  = arry1.filter( (x)=>{
+    //     return x%10 == 0;
+    // });
+    // document.write(NewValue + "<br>");
+    // console.log(NewValue);
+
+    // let NewArray = arry1.map((inside)=>{
+    //     return inside*inside;
+    // });
+
+    // document.write("<br>"+NewArray + "<br>" +"NEw array of square");
+    // console.log(NewArray , "new array of square" + "<br>");
+    // CWH new playlist video 21 start here & yahoo baba video 54 start
+    let obj1 = {
+        Fname: 'demo_name',
+        Lname: 'last_demo_name',
+        age: 23,
+        email: 'demo_email'
+    };
+    for (const key in obj1) {
+        document.write("<br>" + key + " : " + obj1[key]);
+        console.log(key + " : " + obj1[key]);
+    }
+    // CWH new playlist video 22 start here & yahoo baba video 63 start
+
+    let random= Math.floor(Math.random() * 100) + 1; 
+    random= parseInt(random);
+    // this generate the random number
+
+    let count = 100; //this is number chances
+    let guess;
+    do {
+        // guess = prompt("Enter the number you guess between 1 to 100?");
+        count = count - 1;
+        if (guess == random) {
+            console.log("Congrats You Guess Correct Number...");
+            document.write("Congrats You Guess Correct Number...");
+
+            console.log(`Your score is : ${count} `);
+        } else if (guess < random) {
+            document.write("less");
+            
+            console.log("Sorry Your Guess is less Than Hidden Number...");
+        } else if (guess > random) {
+            document.write("greater");
+            console.log("Sorry Your Guess is Greater Than Hidden Number...");
+        } else if (guess >100){
+
+            console.log("Please Enter the number between 1 to 100...");
+        }
+    } while (guess != random);
+    console.log("Game Over"); 
+</script>
+
+</html>

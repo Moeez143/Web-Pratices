@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing day 22</title>
+</head>
+<body>
+    <div class="container">
+        <h1>this is heading </h1>
+    </div>
+    <script>
+// video 61 js and video 15 of new playlist
+        console.log("js checking");
+        let m = Math;
+        console.log("e=",m.E);
+        console.log("pi=",m.PI);
+        console.log("log 10=",m.LOG10E);
+        let a = 89.8383;
+        console.log("the round function" , Math.round(a));
+        let b = 2;
+        console.log("power function 2^2=" , Math.pow(2,2));
+        console.log("power function square root of 64 = " , Math.sqrt(64));
+        console.log("power function square root of 50 = " , Math.sqrt(50));
+        // trigonomatric function
+        console.log("sin(2) = ", Math.sin(a));
+        console.log("cos(2) = ", Math.cos(a));
+        console.log("tan(2) = ", Math.tan(a));
+        let c = 50;
+        console.log("the min value between a,b,c is " , Math.min(a,b,c));
+        let ran=Math.random();
+        console.log("Genertor number between 0 and 1 = ",Math.random(ran));
+        let a1 = 1;
+        let b2 = 100;
+        let ran1 = a+(b-a)*Math.random();
+        console.log("the number b/w 1 to 100 = ", ran1); 
+        console.log("has\"".length);
+// video 62 js  and new playlist video 16 
+        // JSON tutorial
+        let JSONobj ={
+            name : "demo_name",
+            Channel : "obito GAming",
+            firend : "demo_friend"
+        }
+        console.log(JSONobj);
+        let jsonstr = JSON.stringify(JSONobj);
+        console.log(jsonstr);
+        jsonstr = jsonstr.replace("demo_name","demon_name");
+        console.log(jsonstr);
+        let newjson = JSON.parse(jsonstr);
+        console.log(newjson);
+        let marks = [94,94,67,88,"leave"];
+        console.log(marks);
+        console.log("the lenght of marks array is :",marks.length);
+
+        console.log(marks[0]);
+        console.log(marks[1]);
+        console.log(marks[2]);
+        console.log(marks[3]);
+        console.log(marks[4]);
+        marks[0] = 99;
+        console.log(marks);
+        document.write("<ul>");
+        for (let index = 0; index < marks.length; index++) {
+            // console.log(`The marks array value of index ${index} is : `,marks[index]);
+            document.write("<li>"+marks[index] + "</li>");
+        }
+        // document.write("</ul>");
+        // let arry = new Array(2);
+        // for (let get = 0; get < arry.length; get++) {
+        //     arry[get]=prompt("enter the value");
+        // }
+        // for (let index = 0; index < arry.length; index++) {
+        //     // console.log(arry[index]);
+        //     document.write(`index ${index} value you enter is : `+arry[index] +"<br>");
+        // }
+// video 63 start here and new playlist video 17
+        let num = [12,34,44,55];
+        let str = num.toString();
+        console.log(str);
+        let jon = num.join("_");
+        console.log(jon);
+        num.pop();
+        console.log(num);
+
+// video 64 start here and new playlist video 18
+        let num1 = [1,2,3,4,5];
+        console.log(num1);
+        delete num1[0];
+        console.log(num1);
+        let num2 = [6,7,8,9];
+        let newarry = num1.concat(num2);
+        console.log(newarry);
+        let num3 = [55,44,78,33];
+        console.log(num3.sort());
+        console.log("Now asccesning order")
+        let compare = () =>{
+            return a -b 
+        }
+        num3.sort(compare);
+        console.log(num3);
+        num3.splice(1 ,2 , 99 , 88 ,98 );          
+        // let delevalue = num3.splice(1 ,2 , 99 , 88 ,98 );
+
+        // console.log(delevalue);
+        let newarray2 = num3.slice(1 ,3); //this is function create new array 
+        console.log(newarray2);
+    </script>
+</body>
+</html>

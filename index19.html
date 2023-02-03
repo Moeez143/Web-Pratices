@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing day 19 </title>
+</head>
+<style>
+    .container{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 
+        'navbar navbar navbar navbar navbar'
+        'section section aside aside aside';
+    }
+    .item{
+        background-color: aqua;
+        border: 2px solid black;
+    }
+    #navbar{
+        grid-area: navbar;
+    }
+    #section{
+        grid-area: section;
+    }
+    #aside{
+        grid-area: aside;
+    }
+    @media only screen and (max-width:300px){
+        body{
+            background-color: red;
+        }
+    }
+    @media (min-width:300px) and (max-width:600px){
+        body{
+            background-color: aqua;
+        }
+        .container1 {
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'section section section section'
+        'aside aside aside aside'
+        'footer footer footer footer';
+    }
+    aside{
+        display: none;
+    }
+    }
+    @media (min-width:600px) and (max-width:900px){
+        body{
+            background-color: yellow;
+        }
+        .container1 {
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'section section section section'
+        'aside aside aside aside'
+        'footer footer footer footer';
+    }
+    }
+    @media (min-width:900px){
+        body{
+            background-color: blue;
+        }
+    }
+    .container1{
+        display: grid;
+        grid-gap: 1rem  ;
+        grid-template-areas: 
+        'navbar navbar navbar navbar'
+        'section section aside aside'
+        'footer footer footer footer';
+    }
+    .bdr{
+        border: 2px solid black;
+        background-color: wheat;
+        padding: 5px;
+    }
+    nav{
+        grid-area: navbar;
+    }
+    section{
+        grid-area: section;
+    }
+    aside{
+        grid-area: aside;
+    }
+    footer{
+        grid-area: footer;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>video 44 start here about grid tempelate area</h1>
+    <div class="container">
+        <div id="navbar" class="item">
+            Home Contact Us Branch Services
+        </div>
+        <div id="section" class="item">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At vel soluta laborum. Obcaecati tempore dolor commodi illum quaerat iste, maxime ipsa possimus fugit deserunt consequuntur modi neque
+        </div>
+        <div id="aside" class="item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, laborum? Deserunt omnis pariatur delectus animi cum atque aliquam nam rerum doloribus alias sit, odit magni quam quidem voluptatibus necessitatibus tempora, libero quae itaque explicabo praesentium obcaecati
+        </div>
+    </div>
+    <h1>video 44 here and video 45 start here</h1>
+    <div class="container1">
+        <nav class="bdr">
+            Home About Contact Us
+        </nav>
+        <section class="bdr">
+           <h2> Learn CSS here</h2>
+        </section>
+        <aside class="bdr">
+        <h2>More About US</h2> 
+        </aside>
+        <footer class="bdr">CSS of footer 2022</footer>
+    </div>
+</body>
+</html>

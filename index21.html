@@ -1,0 +1,189 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing </title>
+</head>
+<body>
+    <h1>Video on js going on</h1>
+    <p>video 51 start here </p>
+    <div>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+        </ul>
+    </div>
+
+
+<script>
+    let string1 = "this is string1";
+    console.log(string1);
+    // if else
+    let age=20;
+    if(age<18){
+        console.log("less wali condition");
+    }
+    else if(age==18) {
+        console.log("equal wali condition");
+    }
+    else if(age>18){
+        console.log("greater wali condition");
+    }
+    // switch
+    let test=5
+    switch (test) {
+        case test=1:
+            console.log("the value is 1");
+            break;
+        case test=2:
+            console.log("the value is 2");
+            break;
+         case test=3:
+            console.log("the value is 3");
+            break;
+        case test=4:
+            console.log("the value is 4");
+            break;
+        default:
+            console.log("the value is not between 1,2,3,4")
+            break;
+        }
+        let vari1=5;
+        let str1="Obito"
+        console.log(str1 + vari1); 
+        console.log(typeof (str1 + vari1));
+        const a1={
+            name: "Obito",
+            section: 1,
+            go: false
+        }
+        a1['friend']="naurto";
+        a1['name']="rock lee";
+        console.log(a1.name);    
+        console.log(a1['go']);
+
+        // video 51 done of js and js new is video 5 done
+
+        let myvar1 = 35;
+        let mysvar2 = "string";
+        let myvar3 = true;
+        let myvar4 = null;
+        // let myvar5 = undefined;     primitive value
+        let empolyee ={
+            name: "Obito",
+            age: 20,
+            channel1: "Obito Games",
+            channel2: "Obito with Gaming"
+        }
+        console.log(empolyee);
+        console.log(typeof empolyee)
+
+        // empolyee are create by munally but we can do better by arrary way
+
+        let name= new Array(30,28,35,"Obito name",undefined);
+        // console.log(name);
+        // console.log(typeof name);
+        // console.log(name[3]);
+        name= name.sort();
+        console.log(name);
+        name.push(99);
+        console.log(name);
+        console.log(name.sort());
+        // this is uesd to way declear the 23 values in array 
+        let new1= new Array(23);
+        console.log(new1);
+        
+        // operator in js 
+        let a=45;
+        let b=50;
+        console.log(a+b);
+        console.log(a-b);
+        console.log(a/b);
+        console.log(a*b);
+        
+        console.log("a equal to ",a);
+        a += 5;
+        a -=5;
+        console.log("now a is equal ",a);
+        let comp1=6;
+        let comp2=7;
+        console.log("comp1 == comp2",comp1 == comp2);
+        console.log("comp1 != comp2",comp1 != comp2);
+        console.log("comp1 > comp2",comp1 > comp2);
+        console.log("comp1 < comp2",comp1 < comp2);
+        console.log(comp1<comp2 && comp1!=comp2);
+// video 52 start here about array and object important topic  and new playlist video 6 done
+console.log("this is video 53");
+let name1="Damo1";
+let name2="Damo2";
+let name3="Damo3";
+let nametext="demo text of function"
+        function demof(name,text){
+            console.log(text + " " + name);
+            console.log(name + " variable");
+        }
+        demof(name1, nametext);
+        demof(name2, nametext);
+        demof(name3, nametext);
+        function sum(a,b,c){
+            return a+b+c;
+        }
+        let valreturn=sum(1,2,3);
+    console.log(valreturn); 
+
+    let a2=45;
+    console.log(a2);
+    console.log(typeof a2);
+    a2 = Number.parseInt(a2);
+    console.log(typeof a2);
+    if(a2>0){
+        alert("this is valid");
+    } 
+    else{
+        alert("this isnot valid");
+    }
+    console.log("you can " , a2<18? "not drive" : "drive");
+    //  video 53 done here and new platlist video 7 done here done
+    let a3=prompt("what the name boi?", "Guest");
+    console.log(a3);
+    let deletepost = confirm("Do you want to delete this post of page?");
+    // console.log(deletepost);
+    if(deletepost){
+        console.log("post deleted");
+    }
+    else{
+        console.log("post not deleted");
+    }
+    let age1 = prompt("Enter your age?");
+    if(age1>10 && age1<20){
+        console.log("age is between 10and 20");
+        alert("age is between 10and 20");
+    }
+    else{
+        console.log("age is not between 10 and 20");
+        alert("age is not between 10 and 20");
+    }
+    let num = prompt("enter the number");
+    num = Number.parseInt(num);
+    if(num%2==0 || num%3==0){
+        // console.log("your number divible by 2 and 3");
+        if(num%2==0){
+            console.log("divible by 2");
+        }
+        else{
+            console.log("divible by 3");
+        }
+    }
+    else{
+        console.log("your number not divible by 2 and 3");
+    }
+    document.write("<h1> heading by write</h1>");
+    // video 54 done here and new playlist video 8 done
+    
+</script>
+</body>
+</html>

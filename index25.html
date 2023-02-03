@@ -1,0 +1,295 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="Rock , Paper , Siscoer Game.js"> -->
+</head>
+<style>
+    #demo {
+        color: aqua;
+        border: green;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    .red{
+        background-color: red;
+    }
+    .textDrak{
+        color: black;
+    }
+</style>
+
+<body>
+    <div id="child">
+        <h1 id="heading">js
+            <h2>inner h1</h2>
+            <h3>inner h1 2</h3>
+        </h1>
+        <h1 id="heading-2">js 2</h1>
+        <p id="demo">Paragraph</p>
+        <p id="demo1"></p>
+        <button id="btn" onclick="Remover()">Remove EventFunction</button>
+    </div>
+    <div id="test">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita dicta numquam optio ea perferendis suscipit. Minus laborum cupiditate aut eos!</p>
+    </div>
+    <div id="test1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae iste doloribus ducimus maxime, quae perspiciatis repellendus dolore nobis quas ullam!
+    </div>
+    <div id="card">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, error?</p>
+    </div>
+    <div id="first1" class="container">
+        <div class="group">
+            <h3>Group 1 Div</h3>
+        </div>
+        <div class="group">
+            <h3>Group 2 Div</h3>
+        </div>
+        <div class="group">
+            <h3>Group 3 Div</h3>
+        </div>
+    </div>
+    <span id="first" class="hey">HI i am span </span>
+    <div id="second" class="yellow textDrak">
+        Hi...! 
+        I am Second In Div
+    </div>
+</body>
+<script>
+        // CWH new playlist video 22 start here & yahoo baba video 63 start
+
+        // let random= Math.floor(Math.random() * 100) + 1; 
+        // random= parseInt(random);
+        // this generate the random number
+
+        // let count = 100; //this is number chances
+        // let guess;
+        // do {
+        //     guess = prompt("Enter the number you guess between 1 to 100?");
+        //     count = count - 1;
+        //     if (guess == random) {
+        //         console.log("Congrats You Guess Correct Number...");
+        //         document.write("Congrats You Guess Correct Number...");
+
+        //         console.log(`Your score is : ${count} `);
+        //     } else if (guess < random) {
+        //         document.write("less");
+
+        //         console.log("Sorry Your Guess is less Than Hidden Number...");
+        //     } else if (guess > random) {
+        //         document.write("greater");
+        //         console.log("Sorry Your Guess is Greater Than Hidden Number...");
+        //     } else if (guess >100){
+        //         document.write("more than 100");
+        //         console.log("Please Enter the number between 1 to 100...");
+        //     }
+        // } while (guess != random);
+        // console.log("Game Over"); 
+
+        // CWH new playlist video 23 start here & yahoo baba video 64 start
+        document.querySelectorAll('#heading').innerHTML = "JavaScript";
+        let element = document.querySelectorAll('#heading')[0].innerHTML;
+        console.log(element);
+
+
+        // CWH new playlist video 23 start here & yahoo baba video 66 start
+        document.addEventListener("click", function () {
+            document.getElementById("demo").style.color = "red";
+            document.getElementById("demo").style.border = "1px solid black";
+
+        });
+
+        document.addEventListener("mousemove", generater);
+
+        function generater() {
+            document.getElementById("demo1").innerHTML = Math.random();
+        };
+
+        function Remover() {
+            document.removeEventListener("mousemove", generater);
+        };
+
+        // CWH new playlist video 25 start here & yahoo baba video 68 start
+        console.log(console);
+        let obj = { a: 1, b: 2, c: 3 };
+        console.table(obj);
+
+        console.time("forloop");
+        for (let index = 0; index < 5; index++) {
+            console.log(2222);
+        }
+        console.timeEnd("forloop");
+
+        // CWH new playlist video 27 start here & yahoo baba video 69 start
+        let a = document.getElementById('child').childNodes;
+        let a1 = document.getElementById('child').children;
+
+        document.getElementById('child').children[3].style.color = "red";
+        console.log(a1);
+        console.log("ABOVE using children method");
+        console.log(a);
+        console.log("ABOVE using childNode method");
+
+        // CWH new playlist video 28 start here & yahoo baba video 70 start
+        console.log(document.head);
+        // document.body.style.background = "red";
+
+        location.herf = "http://www.facebook.com";
+        console.log(location.herf = "http://www.facebook.com");
+
+        let First = document.getElementById('child').lastElementChild.innerHTML;
+        console.log(First); //this is give you text of first child/last child and innserHTML not uesd than its give you whole tag with its content
+        let First1 = document.getElementById('child').lastElementChild;
+        console.log(First1);
+        document.getElementById('child').lastElementChild.style.background = "aqua";
+
+        // CWH new playlist video 28 start here & yahoo baba video 71 start
+        let NextSibling = document.getElementById('btn').nextElementSibling;
+        document.getElementById('heading-2').previousElementSibling.style.background = "yellow";
+        document.getElementById('heading-2').nextElementSibling.style.background = "brown";
+
+        console.log(NextSibling);
+
+        // CWH new playlist video 29 start here & yahoo baba video 72  start
+        function DriveCheck(age) {
+            if (age >= 18) {
+                alert("Yes, You can Drive....!");
+            }
+            else if (age < 18) {
+                alert("No, You can Drive....!");
+            }
+        }
+        // let RunAgain;
+        // do{
+        // let age = prompt("Enter the age?");
+        // DriveCheck(age);
+        // RunAgain = confirm("Do You Want Ask Age Again?");
+        // }while(RunAgain == true)
+
+        // function ChangeURL(goto){
+        //     if(goto > 4){
+        //         location.href="http://www.google.com";
+        //     }
+        // else{
+        //     console.log("You Cannot Change Your Location");
+        // }
+        // }
+
+        // let loc = prompt("Enter number for Change http?");
+        // ChangeURL(loc);
+
+        // let color = prompt("Enter the color?");
+        // document.body.style.background = color;
+
+        // CWH new playlist video 30 start here & yahoo baba video 72  start
+
+        //  let user = prompt("Enter the any one (R , P , S)?");
+        // let computer = Math.floor(Math.random() * 3);
+        // let selector = ["R", "P", "S"][computer];
+        
+        // function check(user, selector) {
+        //     if (user == selector) {    
+        //         return "Draw";
+        //     }
+        //     else if (user == "R" && selector == "P") {
+        //         return "Computer";
+        //     }
+        //     else if (user == "R" && selector == "S") {
+        //         return "User";
+        //     }
+        //     else if (user == "P" && selector == "R") {
+        //         return "User";
+        //     }
+        //     else if (user == "P" && selector == "S") {
+        //         return "Computer";
+        //     }
+        //     else if (user == "S" && selector == "R") {
+        //         return "Computer";
+        //     }
+        //     else if (user == "S" && selector == "P") {
+        //         return "User";
+        //     }
+        // }
+        // let result = check(user , selector);
+        // document.write("<br>" + `Computer : ${selector} and You : ${user}`);
+        // document.write("<br>" + "The Winnner is : " + result); 
+
+        // CWH new playlist video 32 start here & yahoo baba video 72  start
+        let newelement = document.createElement('h2');
+        console.log(newelement);
+        let newtext = document.createTextNode('this is text by CreateTextNode');
+        console.log(newtext);
+        let newcomment = document.createComment('just comment');
+        console.log(newcomment);
+
+        // CWH new playlist video 32 start here & yahoo baba video 73 start
+        newelement.appendChild(newtext); //newtext added in h2 tag
+
+        document.getElementById('test').appendChild(newelement); //this line show the tag in DOM
+        document.getElementById('test').appendChild(newelement).style.color = "red";
+        document.getElementById('test').appendChild(newelement).style.cursor = "pointer";
+        let target = document.getElementById('test');
+        target.insertBefore(newelement,target.childNodes[0]);//this line insert tag before the traget element
+
+        // CWH new playlist video 33,34 start here & yahoo baba video 74 start
+
+        // let newelem = document.createElement('h2');
+        // let newtext1 = document.createTextNode("this is text by adjecent element");
+        // newelem.append(newtext1)
+       
+        let traget1 = document.getElementById('test1');
+        let newelem = "<h2>this is heading by adjecent HTML Method</h2>";
+        traget1.insertAdjacentHTML("afterbegin",newelem);
+
+        
+        // CWH new playlist video 36 start here & yahoo baba video 76 start
+        document.getElementById('card').style.color = "blue";
+       /* document.getElementsByClassName('group')[0].style.color = "yellow";
+        document.getElementsByClassName('group')[1].style.color = "aqua";
+        document.getElementsByClassName('group')[2].style.color = "grey";
+*/
+        document.querySelectorAll('.group')[0].style.color ="red";
+        document.querySelectorAll('.group')[1].style.color ="green";
+        document.querySelectorAll('.group')[2].style.color ="blue";
+        console.log(document.querySelector('.container').getElementsByTagName('div'));
+
+        
+        // CWH new playlist video 42 start here
+        let a2 = first.getAttribute("class");
+        console.log(a2);
+        console.log(first.hasAttribute("class"));
+        console.log(first.hasAttribute("hey"));
+        
+        // CWH new playlist video 42 start here
+        document.getElementsByTagName('span')[0].innerHTML = "<h1>Hello World...!</h1>"; 
+        
+        // CWH new playlist video 44 start here
+      /*  second.insertAdjacentHTML('beforebegin','<div class = "test">Add div beforeBegin by Insert adacent method</div>');
+        second.insertAdjacentHTML('beforeend','<div class = "test">Add div beforeEnd by Insert adacent method</div>');
+        second.insertAdjacentHTML('afterbegin','<div class = "test">Add div AfterBegin by Insert adacent method</div>');
+        second.insertAdjacentHTML('afterend','<div class = "test">Add div AfterEnd by Insert adacent method</div>');
+*/
+        // CWH new playlist video 45 start here
+ 
+        second.className = "textDrak red ";
+        second.classList.remove("red");
+        second.classList.add("yellow");
+        second.classList.toggle("red");
+
+        // CWH new playlist video 46 start here
+        function timer(){
+            alert("Inside function and runing by settimer");
+        }
+        // setTimeout(timer,5000); 
+        
+         
+
+
+</script>
+
+</html>

@@ -1,0 +1,241 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing days 22</title>
+</head>
+<style>
+    #head{
+        border: 2px solid black;
+    }
+    #btn {
+        padding: 10px;
+        border-radius: 4px;
+        background-color: aqua;
+        color: black;
+        border: 1px solid black;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 id="head">this is heading of h1</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi explicabo, cumque corrupti delectus
+            officiis tempora blanditiis porro et saepe, quaerat ut ratione libero quam unde odit ducimus, veniam fuga
+            odio. Laborum placeat dolor porro dolores vero corrupti enim? Ipsum excepturi sed nostrum velit laudantium
+            unde. Odio, aliquid! Exercitationem perspiciatis explicabo nemo, tempore quidem accusamus commodi nam
+            impedit quibusdam. Ut laborum vel cupiditate ratione consectetur, repellat quidem assumenda corporis,
+            numquam optio exercitationem illo quo quis facere nesciunt eaque eveniet tenetur ipsam, iusto vero
+            voluptatibus totam nostrum ipsum? Quaerat debitis praesentium deserunt soluta neque ipsam? Culpa
+            voluptatibus blanditiis sunt a laboriosam labore inventore, corporis temporibus recusandae ad ab vero.
+            </p>
+    </div>
+    <button id="btn" onclick="togglehide()">Show/Hide</button>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Serives</li>
+            <li>Contect Us</li>
+            <li>Branch</li>
+        </ul>
+    </div>
+    <div>
+        The time now in Pakistan is   <span id="time"></span> 
+    </div>
+    <script>
+// video 55 start here
+        console.log("js checking");
+
+
+        // Loop Section start here
+        console.log("loop start here");
+        for (let i = 0; i < 3; i++) {
+            console.log(i);
+        }
+        console.log("this is simple loop and loop uesd for arry");
+
+
+        let demo = ["Web", "Java", "CSS", "C++"];
+        for (let index = 0; index < demo.length; index++) {
+            const element = demo[index];
+            console.log("Demo arrry " + element);
+        }
+        console.log("this is uesd for array but modern javascript loop uesd function below ");
+
+
+        demo.forEach(function f(element) {
+            console.log("advance way of using for each loop" + " " + element);
+        });
+
+
+        for (const element of demo) {
+            console.log("advance way of using forOf loop" + " " + element);
+        }
+
+        // this is how 3 way to uesd for loop
+        // now forIN loop uesd for Object
+
+
+        let empolyee = {
+            name: "Demo",
+            age: 34,
+            channel: "obito gaming"
+        }
+        for (const key in empolyee) {
+            if (Object.hasOwnProperty.call(empolyee, key)) {
+                console.log(`the ${key} of  empolyee is ` + empolyee[key]);
+
+            }
+        }
+
+        // while loop
+        let w = 1;
+        while (w < 4) {
+            console.log(`${w} is less than 4`);
+            w++;
+        }
+
+        // do while loop
+        let d = 5
+        do {
+            console.log(`${d} less than 4 but we inside the do while that why its run atleast one time`);
+            d++;
+        } while (d < 4)
+
+// video new playlist video 11 and Video 56 of js start here
+        function OnePlusAvg(x, y) {
+            const insider = 1 + (x + y) / 2;
+            console.log("Done");
+            return insider;
+        }
+        let a = 3;
+        let b = 2;
+        let c = 1;
+        console.log("a and b function value = ", OnePlusAvg(a, b));
+        console.log("a and b function value = ", OnePlusAvg(a, c));
+        console.log("a and b function value = ", OnePlusAvg(c, b));
+
+        let main = document.getElementById('main');
+        console.log(main);
+        let navi = document.getElementById('nav').innerHTML = "<li>Dynamic Element</li><li>Dynamic Element</li><li>Dynamic Element</li>";
+        console.log(navi);
+        let cont = document.getElementsByClassName('container');
+        console.log(cont[1]);
+        let selec = document.querySelector('#nav');
+        console.log("Selector Returen", selec);
+
+        let sele = document.querySelectorAll('#nav>li');
+        console.log("Selector Returen", sele);
+
+// video 57 JS ABOUT EVENT start here and new playlist 12;
+        function togglehide() {
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            if (para.style.display != 'none') {
+                para.style.display = 'none';
+                document.getElementById('btn').addEventListener('click', function newfun() {
+                    document.getElementById('btn').style.background = "white";
+                });
+            }else {
+                para.style.display = 'block';
+                document.getElementById('btn').addEventListener('click', function newfun() {
+                    document.getElementById('btn').style.background = "aqua";
+                });
+            }
+        }
+
+        // document.getElementById('head').addEventListener('mouseover', function heading() {
+        //     console.log("Mouse over event listen inside");
+        // });
+        // document.getElementById('head').addEventListener('mouseout', function heading() {
+        //     console.log("Mouse over event listen outside");
+        // });
+
+
+        // head.addEventListener('mouseout',function newrun(){
+        //     console.log("mouse out side");
+
+        // });
+
+        document.getElementById('btn').addEventListener('click', function clicking() {
+            console.log("Mouse clicking event happend");
+        });
+
+        document.getElementById('head').addEventListener('click',function newrun(){
+            document.getElementById('head').style.border="2px solid red";
+            console.log("event firing");
+        });
+
+        let mark={
+            moeez : "90",
+            shuban : "80",
+            udsman : "70"
+        }
+        // object uesd forIN loop its make easy 
+        for (const key in mark) {
+            if (Object.hasOwnProperty.call(mark, key)) {
+                console.log(`${key} got `+ mark[key]);
+                
+            }
+        }
+        
+// video 58 and 59 js start here and new playlist video 13
+
+
+        // setTimeout allow function to run at one time at time interval
+        // clearTimeout allow function run at multiple time at time 
+        // let name = 'demo';
+        function greet(name4 , byetext){
+            console.log("heloo "+ name4 +" "+byetext);
+        }
+        timeout = setTimeout( greet , 2000, "harrt", "take car");
+        clearTimeout(timeout);
+        console.log(timeout);
+        // setInterval(greet, 1000 , "demoNAme", "DemoText");
+        // setTimeout(function(name){
+        //     console.log("hello good set time functon running" +" "+'name');
+        // }, 2000);
+
+        function displayTime(){
+            let time = new Date();
+            // console.log(time);
+            document.getElementById('time').innerHTML = time; 
+        }
+        setInterval(displayTime,1000);
+        // let dt = new Date(2024,11,21);
+        // console.log(dt);
+        
+// new playlist video 14  and js playlist video 60
+        let name = "demo_String";
+        console.log(name.length);
+        console.log(name.toUpperCase());
+        console.log(name.toLowerCase());
+        console.log(name.replace("String" ,"Charator " ));
+        let name1 = "add anther string";
+        console.log(name + name1 + "this is add by console.log and plus(+)");
+        console.log(name.concat("is a concat mehtod ", name1, "this is add  by concat() mathod in console.log"));
+
+        let fr="Demo string printing using loop";
+        for(let i=0;i<fr.length ; i++){
+            console.log(fr[i]);
+        }
+        // arrow function in js playlist
+        green =() => {
+            console.log('arrow function running' );
+        }
+        green();
+        setInterval(() => {
+            console.log("setinterval function running");
+        }, 7000);
+        let sum = (a,b)=> a+b;
+        let half = (a) => a/2;
+        
+    </script>
+</body>
+
+</html>
